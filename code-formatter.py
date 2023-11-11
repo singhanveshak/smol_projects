@@ -1,8 +1,9 @@
 '''
 This script formats/beautifies code written in different languages.
 CURRENTLY SUPPORTING: C, C++,C#, java, BASH
-ALGORITHM CHOICE: Go to every character 1 by 1-> collect lines (break them at ; } {  '')-> write to file
-EXAMPLE FILE: temp.js
+ALGORITHM CHOICE (c,c++,java): Go to every character 1 by 1-> collect lines (break them at ; } {  '')-> write to file
+EXAMPLE FILE: temp.c
+EXAMPLE FILE: temp.sh
 USAGE: $>python code-formatter.py temp.c
 '''
 import sys
@@ -53,6 +54,7 @@ def format_c(filename):
 
 def format_bash(filename :str):
     '''format bash code'''
+    print("formatting bash script...")
     copy=open(f'formatted_{filename}','w')
     count=0     #THIS VAR KEEPS TRACK OF NUMBER OF OPENED BRACKETS
     with open(filename) as f:
@@ -61,20 +63,27 @@ def format_bash(filename :str):
             #COLLECT LINES FROM FILE
             line=''
             ch=' '
-            while(ch!=';' and ch!='}' and ch!='{' and ch!=''):
+            while(ch!=';' and ch!='\n' and ch!=''):
                 ch=f.read(1)          
                 line+=ch
+                if(ch==';'):
+                    if(f.read(1)==';'):
+                        line+=ch
+                    else:
+                        f.seek(f.tell()-1)
+
             #WRITE THE LINE
-            if(ch=='}'):
+            if(('fi' in line) or ('esac' in line) or ('done' in line) or ('return' in line)):
                 count-=1 
             if(count<0):
                 count=0
-            if(ch=='{'):
+            if(('do' in line) or ('then' in line) or (('case' in line) and ('in' in line)) or ('else' in line)):
                 copy.write("\t"*count+line.strip()+"\n")                
                 count+=1
             else:
                 copy.write("\t"*count+line.strip()+"\n")
 
+#HERE WE FINALLY USE THE ABOVE DEFINED FUNCTIONS
 try:
     if(check_script(file_name)==0):
         #if C, C++, csharp
