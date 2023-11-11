@@ -17,11 +17,11 @@ This script helps you to record your habit progress.
 
 Helps you set challanges, goals, projects.
 
+USAGE: $>python progress_report_script.py db.txt
+
 --------------code-formatter.py-----------------
 
 This script helps you to format c/cpp/js scripts.
-
-bash formatter code to be added.
 
 KNOWN ISSUES: 'for loop' broken into 2 pieces :( when formatted
 
