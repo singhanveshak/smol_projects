@@ -23,4 +23,6 @@ This script helps you to format c/cpp/js scripts.
 
 bash formatter code to be added.
 
+KNOWN ISSUES: 'for loop' broken into 2 pieces :( when formatted
+
 USAGE: $>python code-formatter.py <path_to_file>
