@@ -49,8 +49,6 @@ def to_json(filename: str):
         ret.write("[\n")
         while(line!=['']):
             line=f.readline().strip().split(',')
-            print(f"for {line}")
-
             i=0
             x=""
             for col,ele in zip(cols,line):
