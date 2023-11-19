@@ -25,4 +25,9 @@ This script can
   1) parse csv into .json file
   2) display csv data in beautiful tabular form (into a .txt file)
 
-USAGE: $>pyhton csv-to.py <path_to_file.csv>
+USAGE: $>python csv-to.py <path_to_file.csv>
+
+-------------ascii-art-generator.py-------------
+This script takes in an image and prints its ascii-art
+
+USAGE: $>python ascii-art-generator.py <image_path>
