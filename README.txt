@@ -8,6 +8,16 @@ I've tried to source every file from /usr/bin/
 
 USAGE: $>./gandalf.sh <path_to_stegno_file>
 
+------------------parrot.sh------------------
+This script aniamtes a parrot dancin' n vibin' in your terminal ! 
+
+USAGE: $>./parrot.sh
+
+-------------ascii-art-generator.py-------------
+This script takes in an image and prints its ascii-art
+
+USAGE: $>python ascii-art-generator.py <image_path>
+
 -----------progress_report_script.py-----------
 This script helps you to record your habit progress.
 Helps you set challanges, goals, projects.
@@ -27,7 +37,3 @@ This script can
 
 USAGE: $>python csv-to.py <path_to_file.csv>
 
--------------ascii-art-generator.py-------------
-This script takes in an image and prints its ascii-art
-
-USAGE: $>python ascii-art-generator.py <image_path>
