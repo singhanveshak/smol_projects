@@ -9,8 +9,8 @@ I've tried to source every file from /usr/bin/
 USAGE: $>./gandalf.sh <path_to_stegno_file>
 
 ------------------parrot.sh------------------
-This script aniamtes a parrot dancin' n vibin' in your terminal ! 
-
+This script animates a parrot dancin' n vibin' in your terminal ! 
+Code's original but this is someone else's idea and they colored it too (just google "parrot in terminal")!
 USAGE: $>./parrot.sh
 
 -------------ascii-art-generator.py-------------
