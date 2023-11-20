@@ -6,6 +6,8 @@
 #ascii-greyscale: " .:-=+*#%@" (lighter to darker brightness)
 #USAGE: $> ./animate.sh vid.mp4
 
+#make a temp folder to save all frames
+mkdir tempfolder
 #generate ascii frames
 python animate.py $1
 file=$1.txt
@@ -18,3 +20,6 @@ else
     echo "$line"
     fi
 done <$file 
+
+#remove temporary folder
+rm -rf tempfolder
