@@ -14,6 +14,7 @@ USAGE: $>./parrot.sh
 
 -------------ascii-art-generator.py-------------
 This script takes in an image and prints its ascii-art
+Your can see the demo of the program here: https://drive.google.com/file/d/1kxMEQPqlPbLZioDpmIQI1YlJ2EXOX8Ne/view?usp=drivesdk
 USAGE: $>python ascii-art-generator.py <image_path>
 
 --------------------animate.sh------------------
