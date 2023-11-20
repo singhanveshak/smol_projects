@@ -13,7 +13,7 @@ def get_frames(file)->list:
     count = 0
     while success:
       if(count in frames_to_get):
-        cv2.imwrite("%d.jpg"%count, image)     # save frame as JPEG file      
+        cv2.imwrite("./tempfolder/%d.jpg"%count, image)     # save frame as JPEG file      
       success,image = vidcap.read()
       count += 1
     # Release the video capture object
@@ -64,11 +64,11 @@ def write_frame(f, frame: np.array):
 if __name__ == "__main__":
     vid=argv[1]
     frames_to_get=get_frames(vid)           #get frames
-    f=open(f"{vid}.txt","w")                #make a txt file
+    f=open(f"{vid}.txt","w")                #make a txt file to write all ascii frames
     n_rows=0
     s=int(input("Enter the scale by which to reduce animation size? ")) 
     for im in frames_to_get:
-        frame=make_ascii(f"{im}.jpg",s)
+        frame=make_ascii(f"./tempfolder/{im}.jpg",s)
         write_frame(f,frame)
         f.write('101\n')
     f.close()
