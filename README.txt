@@ -22,10 +22,10 @@ This script can animate any (long) video (upto 5 sec) in your terminal
 You can watch the demo of this program here: https://drive.google.com/file/d/1kptvJ7Q0kiJqEHUAKqPR1NYTYn_Vy3NO/view?usp=drivesdk
 USAGE: $> ./animate.sh <video.mp4> 
 
------------progress_report_script.py-----------
-This script helps you to record your habit progress.
-Helps you set challanges, goals, projects.
-USAGE: $>python progress_report_script.py db.txt
+--------------------auto.sh------------------
+This script will automate assembling and linking and open gdb for you.
+PRO TIP: If you install gef extension to your gdb, you will be the coolest kid on the block.
+USAGE: $> ./auto.sh myprog 
 
 --------------code-formatter.py-----------------
 This script helps you to format c/cpp/js/bash scripts.
@@ -38,3 +38,7 @@ This script can
   2) display csv data in beautiful tabular form (into a .txt file)
 USAGE: $>python csv-to.py <path_to_file.csv>
 
+-----------progress_report_script.py-----------
+This script helps you to record your habit progress.
+Helps you set challanges, goals, projects.
+USAGE: $>python progress_report_script.py db.txt
