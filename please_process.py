@@ -36,6 +36,7 @@ for Type in glist:                    #for each group in glist. Each "Type" is a
     description=plan['description'].replace(' ','_')
     price=int(plan['price'])
     
+    #GETTING ALL DATA TO PUT INTO GOOFNESS FORMULA
     if(validity=='NA'):
       n_validity=1
     else:
@@ -58,22 +59,32 @@ for Type in glist:                    #for each group in glist. Each "Type" is a
     else:
       n_data=float(data.split()[0])
 
-    goodness=n_sms*n_data*n_validity/price
-    
+  #CALCULATING GOODNESS AND CHECKING CONDITION FOR PRINTING
+          
     if(_data=='1' and _talk=='1' and _sms=='1'):
       condition= n_data!=1 and talk==101 and n_sms!=1
+      goodness=n_sms*n_data*n_validity/price
     elif(_data=='1' and _talk=='1' and _sms=='0'):
       condition= n_data!=1 and talk==101
+      goodness=n_data*n_validity/price + n_sms
     elif(_data=='1' and _talk=='0' and _sms=='1'):
       condition= n_data!=1 and n_sms!=1
+      goodness=n_sms*n_data*n_validity/price 
+    elif(_data=='0' and _talk=='1' and _sms=='1'):
+      condition= talk==101 and n_sms!=1
+      goodness=n_sms*n_validity/price + n_data
     elif(_data=='0' and _talk=='0' and _sms=='1'):
       condition= n_sms!=1
+      goodness=n_sms*n_validity/price + n_data
     elif(_data=='0' and _talk=='1' and _sms=='0'):
       condition= talk==101
+      goodness=n_validity/price + n_sms + n_data
     elif(_data=='1' and _talk=='0' and _sms=='0'):
       condition= n_data!=1
-    else:
-      condition=False
+      goodness=n_data*n_validity/price + n_sms
+    else: 
+      condition=True
+      goodness=n_sms*n_data*n_validity/price
     
     # print(f"before checking, sms={sms},talk={talk},data={data},validity={validity},condition={condition},type(goodness)={type(goodness)},goodness={goodness},type={producttype=='Recharge'}")
     if(condition and producttype=='Recharge'):
@@ -81,7 +92,7 @@ for Type in glist:                    #for each group in glist. Each "Type" is a
   
   df=pd.DataFrame(lst,columns=['Goodness','Data','SMS','Validity','Price(₹)','Talktime/Description'])
   df.sort_values(by=['Goodness'],ascending=False)
-  print('\n================================[   '+name+'   ================================\n')
+  print('\n================================[ '+name+' ]================================')
   if(not df.empty):
     print(df[['Data','SMS','Validity','Price(₹)','Talktime/Description']])
 print("==================================================================================")
