@@ -43,7 +43,7 @@ read  talktime
 echo -e "\nDo you want data? yes..(1)	don't care..(0)"
 read  data
 
-python3 temp.py $file_name.json $sms $talktime $data 2>err_log
+python3 please_process.py $file_name.json $sms $talktime $data 2>err_log
 
 rm plans.json 2>err_log
 
