@@ -17,6 +17,8 @@ with open(file_path, 'r') as file:
 dic = orjson.loads(json_string)
 
 print("==================================================================================")
+print("Plans are sorted in descending order of Value-to-Cost")
+print("==================================================================================")
 
 glist=dic['groupings']
 
