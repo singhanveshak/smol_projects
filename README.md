@@ -32,7 +32,7 @@ PRO TIP: If you install gef extension to your gdb, you will be the coolest kid o
 >USAGE: $> ./auto.sh myprog 
 
 ## code-formatter.py
-This script helps you to format c/cpp/js/bash scripts.\
+This script helps you to format (indent and beeautify) c/cpp/js/bash scripts.\
 KNOWN ISSUES: 'for loop' broken into 2 pieces :( when formatted\
 >USAGE: $>python code-formatter.py <path_to_file>
 
