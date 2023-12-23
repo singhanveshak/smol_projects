@@ -22,7 +22,7 @@ Your can see the demo of the program here: https://drive.google.com/file/d/1kxME
 >USAGE: $>python ascii-art-generator.py <image_path>
 
 ## animate.sh
-This script can animate any (long) video (upto 5 sec) in your terminal\
+This script can animate any video in your terminal\
 You can watch the demo of this program here: https://drive.google.com/file/d/1kptvJ7Q0kiJqEHUAKqPR1NYTYn_Vy3NO/view?usp=drivesdk
 >USAGE: $> ./animate.sh <video.mp4> 
 
