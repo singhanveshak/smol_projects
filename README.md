@@ -1,6 +1,9 @@
 # **smol_projects**
 These are small projects just created for fun within a day or two.
 
+## A website I made: https://ps-ju.github.io/ps-ju/   https://singhanveshak.github.io/celes/
+## contact: 
+
 ## gandalf.sh
 This script helps in solving CTFs (example stegnography, cryptography, reversing).\
 But you need to have all the files in proper place.\
@@ -46,5 +49,3 @@ This script can
 This script helps you to record your habit progress.\
 Helps you set challanges, goals, projects.
 >USAGE: $>python progress_report_script.py db.txt
-
-A website I made: https://ps-ju.github.io/ps-ju/
