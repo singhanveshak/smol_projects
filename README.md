@@ -20,6 +20,10 @@ Code's original but this is someone else's idea and they colored it too (just go
 This script asks you, your mobile operator and then sorts all recharges in order of Value-by-cost: most efficient Recharge packs on top !
 >USAGE: $> ./Mobile_Recharge.sh
 
+## mail-scraper.py
+This script scrapes mails in bulk from a domain! \
+>USAGE: $>.python mail-scraper.py <your_url_here>
+
 ## ascii-art-generator.py
 This script takes in an image and prints its ascii-art\
 Your can see the demo of the program here: https://drive.google.com/file/d/1kxMEQPqlPbLZioDpmIQI1YlJ2EXOX8Ne/view?usp=drivesdk
