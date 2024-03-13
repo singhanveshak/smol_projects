@@ -6,8 +6,8 @@ EXAMPLE FILE: temp.c
 EXAMPLE FILE: temp.sh
 USAGE: $>python code-formatter.py temp.c
 '''
-import sys
-file_name=sys.argv[1]
+from sys import argv
+file_name=argv[1]
 
 def check_script(file_name: str) -> int:
     '''Checks the programming language of a file'''

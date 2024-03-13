@@ -7,8 +7,8 @@ This script will take your CSV file and
 USAGE: $> python csv-to.py file.csv
 '''
 
-import sys
-filename=sys.argv[1]
+from sys import argv
+filename=argv[1]
 
 with open(filename) as f:
     cols=f.readline().strip().split(sep=',')            #name of cols
