@@ -50,6 +50,11 @@ This script can
   2) display csv data in beautiful tabular form (into a .txt file)
 >USAGE: $>python csv-to.py <path_to_file.csv>
 
+## susnpots.py
+This script will take in a fits file of SUN and return images, fits output
+showing the centre of the limb and also marking the sunspots.
+>USAGE: $> python sunspots.py im1.fits
+
 ## progress_report_script.py
 This script helps you to record your habit progress.\
 Helps you set challanges, goals, projects.
