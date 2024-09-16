@@ -2,8 +2,7 @@
 These are small projects just created for fun within a day or two.
 
 ## A website I made: 
->https://ps-ju.github.io/ps-ju/ 
-## contact: https://www.linkedin.com/in/singhanveshak
+>https://ps-ju.github.io/ps-ju/
 
 ## gandalf.sh
 This script helps in solving CTFs (example stegnography, cryptography, reversing).\
